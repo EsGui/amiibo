@@ -1,0 +1,19 @@
+.Pagination {
+    display: flex;
+    list-style: none;
+}
+
+.Pagination li + li {
+    margin-left: 1rem;
+
+}
+
+.Pagination__item--active {
+    background: none;
+    font-weight: bold;
+    border: none;
+}
+
+.Pagination__item--active:focus {
+    outline: none;
+}
