@@ -1,0 +1,28 @@
+.DivFatherHomeSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.DivSonHomeSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.DivSonHomeSearch input {
+    padding: 10px;
+    width: 40%;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.DivSonHomeSearch button {
+    padding: 10px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
