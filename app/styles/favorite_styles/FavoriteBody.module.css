@@ -1,0 +1,39 @@
+.DivFatherFavoriteBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.DivAmiiboFavoriteBody {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    width: 80%;
+    margin: 20px;
+    padding: 50px;
+}
+
+.DivAmiiboFavoriteBody img {
+    width: 200px;
+    height: 250px;
+}
+
+.DivAmiiboFavoriteBody > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DivAmiiboFavoriteBody div > button {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 25%;
+    cursor: pointer;
+    margin-top: 20px;
+}

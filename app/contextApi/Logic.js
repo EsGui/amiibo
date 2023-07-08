@@ -7,10 +7,6 @@ export default function Logic({ children }) {
     const [textSearch, setTextSearch] = useState("");
     const [offset, setOffset] = useState(0);
 
-    useEffect(() => {
-
-    }, []);
-
     const search = ({ target: { value } }) => {
         setTextSearch(value);
     }
@@ -31,10 +27,10 @@ export default function Logic({ children }) {
 
     const objValue = {
         search,
-        setOffset,
+        setOffset, 
         offset,
         requestAmiibo,
-        buttonSearch
+        buttonSearch,
     }
 
     return (
