@@ -40,9 +40,7 @@ export default function HomeBody() {
         localStorage.setItem("save", JSON.stringify(condition));
     }
 
-    const storageFavorite = JSON.parse(localStorage.getItem("save"));
-
-    console.log(storageFavorite);
+    const storageFavorite = JSON.parse(window.localStorage.getItem("save"));
 
     return (
         <div className={ styles.DivFatherHomeBody }>
