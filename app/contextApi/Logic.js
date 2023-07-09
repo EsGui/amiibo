@@ -14,14 +14,14 @@ export default function Logic({ children }) {
     }
 
     const buttonSearch = async () => {
-        const requestSearch = await axios.get("https://www.amiiboapi.com/api/amiibo");
+        const requestSearch = await axios.get("https://www.amiiboapi.com/api/amiibo/");
         const amiibo = requestSearch.data.amiibo.filter(({ character, gameSeries }) => character === textSearch || gameSeries === textSearch);
         setRequestAmiibo(amiibo)
     }
 
     useEffect(() => {
         const request = async () => {
-            const requestApi = await axios.get("https://www.amiiboapi.com/api/amiibo");
+            const requestApi = await axios.get("https://www.amiiboapi.com/api/amiibo/");
             setRequestAmiibo(requestApi.data.amiibo)
         }
         request();
