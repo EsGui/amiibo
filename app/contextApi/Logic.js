@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react"
 import MyContext from "./MyContext"
 import axios from "axios";
