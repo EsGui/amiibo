@@ -17,12 +17,17 @@ export default function HomeBody() {
     } = useContext(MyContext);
     const [storage, setStorage] = useState([]);
     const [favorite, setFavorite] = useState([]);
+    const [responseStorage, setResponseStorage] = useState("");
 
     useEffect(() => {
         if (!localStorage.getItem("save")) {
             localStorage.setItem("save", JSON.stringify([]));
         }
     }, []);
+
+    useEffect(() => {
+        setResponseStorage(JSON.parse(localStorage.getItem("save")))
+    }, [favorite, storage])
 
     const favoritar = (idAmiibo) => {
         const origin = JSON.parse(localStorage.getItem("save"));
@@ -40,8 +45,6 @@ export default function HomeBody() {
         localStorage.setItem("save", JSON.stringify(condition));
     }
 
-    const storageFavorite = JSON.parse(window.localStorage.getItem("save"));
-
     return (
         <div className={ styles.DivFatherHomeBody }>
             <div className={ styles.DivSonHomeBody }>
@@ -53,7 +56,7 @@ export default function HomeBody() {
                             <p>Character: { character }</p>
                             <p>Game Serie: { gameSeries }</p>
                             {
-                                !storageFavorite.includes(tail) ?
+                                !responseStorage.includes(tail) ?
                                     <button onClick={ () => favoritar(tail) } type="button">Favoritar</button>
                                 :
                                     <button onClick={ () => desfavoritar(tail) } type="button">Desfavoritar</button>
